@@ -10,8 +10,8 @@ enum class PipActionsLayout(
 ) {
     NONE(mutableListOf()),
     MEDIA(mutableListOf(PipAction.PREVIOUS, PipAction.PAUSE, PipAction.NEXT)),
-    MEDIA_ONLY_PAUSE(mutableListOf(PipAction.PAUSE)),
-    MEDIA_LIVE(mutableListOf(PipAction.LIVE, PipAction.PAUSE));
+    MEDIAONLYPAUSE(mutableListOf(PipAction.PAUSE)),
+    MEDIALIVE(mutableListOf(PipAction.LIVE, PipAction.PAUSE));
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun remoteActions(context: Context): MutableList<RemoteAction> =
